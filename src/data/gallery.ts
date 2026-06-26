@@ -12,6 +12,13 @@ export type ServiceSlug =
 
 export type GalleryCategory = 'outdoor' | 'candid' | 'events' | 'others';
 
+export const CATEGORY_META: Record<GalleryCategory, { title: string; description: string; image: string }> = {
+  outdoor: { title: 'Outdoor', description: 'Explore our beautiful outdoor photography collections.', image: '/o1.png' },
+  candid: { title: 'Candid', description: 'Capturing authentic, unposed moments that tell your true story.', image: '/c1.jpg' },
+  events: { title: 'Events', description: 'Professional coverage for all your special events and celebrations.', image: '/e1.png' },
+  others: { title: 'Others', description: 'A diverse collection of our miscellaneous photography work.', image: '/hero.png' },
+};
+
 export const SERVICE_META: Record<
   ServiceSlug,
   { title: string; description: string; image: string }

@@ -54,12 +54,12 @@ export function Footer() {
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
             </svg>
             <a
-              href="https://www.instagram.com/gprs_studio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              href="https://www.instagram.com/gprsphotos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               target="_blank"
               rel="noreferrer"
               className="hover:text-white transition-colors"
             >
-              @gprs_studio
+              @gprsphotos
             </a>
           </div>
 
@@ -86,6 +86,32 @@ export function Footer() {
               className="hover:text-white transition-colors"
             >
               Facebook
+            </a>
+          </div>
+
+          {/* Google Rating */}
+          <div className="flex items-center gap-2 text-zinc-300">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-4 w-4 text-orange-500"
+            >
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <a
+              href="https://www.google.com/maps/place/GPRS+Photography/@10.9540507,79.3759203,17z/data=!4m12!1m2!2m1!1sPhotography+studio!3m8!1s0x3a55337e6ad854e3:0x1c060e770f6b2a5d!8m2!3d10.9540514!4d79.3806844!9m1!1b1!15sChJQaG90b2dyYXBoeSBzdHVkaW-SARJwaG90b2dyYXBoeV9zdHVkaW_gAQA!16s%2Fg%2F11vrtvrbvy!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYyMy4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              Rate Us on Google
             </a>
           </div>
         </div>

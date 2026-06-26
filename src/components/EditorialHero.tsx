@@ -430,7 +430,7 @@ export function EditorialHero() {
                 Facebook
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/gprsphotos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 rel="noreferrer"
                 className="hover:opacity-60"

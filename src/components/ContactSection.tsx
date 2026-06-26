@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 
 const defaultSocialLinks = [
-  { id: "1", name: "Instagram", href: "https://instagram.com" },
+  { id: "1", name: "Instagram", href: "https://www.instagram.com/gprsphotos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" },
   {
     id: "2",
     name: "Facebook",
@@ -52,7 +52,7 @@ export function ContactSection() {
     const { name, email, message, projectType } = formData;
     const text = `Hi, I am ${name}.\nEmail: ${email}\nLooking for: ${projectType.join(", ") || "General Enquiry"}\n\nMessage: ${message}`;
     const encodedText = encodeURIComponent(text);
-    const whatsappUrl = `https://wa.me/919841141813?text=${encodedText}`;
+    const whatsappUrl = `https://wa.me/917708575051?text=${encodedText}`;
 
     window.open(whatsappUrl, "_blank");
     setFormData({ name: "", email: "", message: "", projectType: [] });

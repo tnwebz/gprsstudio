@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { ImageGallery } from '@/components/ImageGallery';
-import { SERVICE_META, type ServiceSlug } from '@/data/gallery';
+import { SERVICE_META, CATEGORY_META, type ServiceSlug, type GalleryCategory } from '@/data/gallery';
 import { useAdmin } from '@/hooks/useAdmin';
 import { useGallery } from '@/hooks/useGallery';
 import { CloudinaryUpload } from '@/components/CloudinaryUpload';
@@ -13,8 +13,15 @@ const SLUGS: ServiceSlug[] = [
 
 export function CategoryGalleryPage() {
   const { slug } = useParams<{ slug: string }>();
-  const validSlug = SLUGS.includes(slug as ServiceSlug) ? (slug as ServiceSlug) : 'hindu_wedding';
-  const meta = SERVICE_META[validSlug];
+  const isService = SLUGS.includes(slug as ServiceSlug);
+  const isCategory = Object.keys(CATEGORY_META).includes(slug as string);
+  const validSlug = isService ? slug as string : isCategory ? slug as string : 'hindu_wedding';
+  
+  const meta = isService 
+    ? SERVICE_META[validSlug as ServiceSlug] 
+    : isCategory 
+      ? CATEGORY_META[validSlug as GalleryCategory] 
+      : SERVICE_META['hindu_wedding'];
   
   const { isAdmin } = useAdmin();
   const { images, addImages, removeImage } = useGallery(validSlug);
