@@ -10,7 +10,7 @@ const HERO_SLIDES = desktopImages.map((dNum, i) => {
   const mNum = mobileImages[i % mobileImages.length];
   return {
     desktopSrc: `/her1 (${dNum}).${dNum === 2 || dNum === 10 ? "jpg" : "png"}`,
-    mobileSrc: `/mer (${mNum}).png`,
+    mobileSrc: `/mer (${mNum}).${mNum === 2 || mNum === 8 ? "png" : "jpg"}`,
     alt: `Photography showcase ${i + 1}`,
   };
 });
@@ -285,7 +285,7 @@ export function EditorialHero() {
 
       {/* Dark overlay for text readability */}
       <div
-        className="pointer-events-none absolute inset-0 z-[1] bg-black/45"
+        className="pointer-events-none absolute inset-0 z-[1] bg-black/10"
         aria-hidden="true"
       />
 

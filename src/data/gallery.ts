@@ -45,7 +45,7 @@ export const SERVICE_META: Record<
   { title: string; description: string; image: string }
 > = {
   birthday: {
-    title: "Birthday Party",
+    title: "Baby Shoot",
     description:
       "We provide a professional photography service and have many years of experience capturing joyous celebrations.",
     image: "/b1.png",
