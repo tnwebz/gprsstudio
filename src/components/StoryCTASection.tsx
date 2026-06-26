@@ -24,9 +24,15 @@ export function StoryCTASection() {
           style={{ y: backgroundY }}
         >
           <img
+            src="/nn1.jpg"
+            alt=""
+            className="h-full w-full object-cover object-[center_30%] sm:hidden"
+            draggable={false}
+          />
+          <img
             src="/n1.jpg"
             alt=""
-            className="h-full w-full object-cover object-[center_30%] sm:object-center"
+            className="hidden h-full w-full object-cover sm:block sm:object-center"
             draggable={false}
           />
         </motion.div>

@@ -35,12 +35,12 @@ export function GallerySection() {
             <Link
               key={cat.key}
               to={`/collections/${cat.key}`}
-              className="group relative h-48 overflow-hidden text-left transition-shadow sm:h-56 md:h-64 ring-1 ring-transparent hover:ring-2 hover:ring-orange-500 hover:shadow-lg block"
+              className="group relative h-56 overflow-hidden text-left transition-shadow sm:h-60 md:h-72 ring-1 ring-transparent hover:ring-2 hover:ring-orange-500 hover:shadow-lg block"
             >
               <img
                 src={cat.image}
                 alt={cat.label}
-                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
               />
 
               <div className="absolute bottom-3 left-3 flex items-stretch sm:bottom-4 sm:left-4">
