@@ -6,11 +6,10 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 
 const defaultSocialLinks = [
-  { id: "1", name: "Instagram", href: "https://www.instagram.com/gprsphotos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" },
   {
-    id: "2",
-    name: "Facebook",
-    href: "https://www.facebook.com/share/1BFHcGftHD/",
+    id: "1",
+    name: "Instagram",
+    href: "https://www.instagram.com/gprsphotos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   },
 ];
 
@@ -104,10 +103,10 @@ export function ContactSection() {
           <div className="mt-6">
             <p className="mb-1 text-sm text-zinc-500">Mail us at</p>
             <a
-              href="mailto:gprsstudio@gmail.com"
+              href="mailto:gprsphotos@gmail.com"
               className="font-medium text-black hover:underline"
             >
-              gprsstudio@gmail.com
+              gprsphotos@gmail.com
             </a>
             <div className="mt-4 flex items-center gap-3">
               <span className="text-sm text-zinc-500">OR</span>

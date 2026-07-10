@@ -106,7 +106,7 @@ export function TestimonialsSection() {
             Loved our work? We'd love to hear from you!
           </p>
           <a
-            href="https://g.page/r/CZUCWGJE9itkEAE/review"
+            href="https://www.google.com/maps/place/GPRS+Photography/@10.9540507,79.3759203,17z/data=!4m12!1m2!2m1!1sPhotography+studio!3m8!1s0x3a55337e6ad854e3:0x1c060e770f6b2a5d!8m2!3d10.9540514!4d79.3806844!9m1!1b1!15sChJQaG90b2dyYXBoeSBzdHVkaW-SARJwaG90b2dyYXBoeV9zdHVkaW_gAQA!16s%2Fg%2F11vrtvrbvy!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDcwNy4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-orange-500 px-8 py-3 text-sm font-semibold uppercase tracking-wider text-white shadow-lg shadow-orange-500/25 transition-all hover:-translate-y-0.5 hover:bg-orange-600 hover:shadow-xl hover:shadow-orange-500/30"
