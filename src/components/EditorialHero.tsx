@@ -9,7 +9,7 @@ const mobileImages = [1, 2, 7, 8];
 const HERO_SLIDES = desktopImages.map((dNum, i) => {
   const mNum = mobileImages[i % mobileImages.length];
   return {
-    desktopSrc: `/her1 (${dNum}).${dNum === 2 || dNum === 10 ? "jpg" : "png"}`,
+    desktopSrc: `/her1 (${dNum}).${dNum === 1 || dNum === 10 ? "jpg" : "png"}`,
     mobileSrc: `/mer (${mNum}).${mNum === 2 || mNum === 8 ? "png" : "jpg"}`,
     alt: `Photography showcase ${i + 1}`,
   };
@@ -307,8 +307,8 @@ export function EditorialHero() {
                   draggable={false}
                 />
                 {/* Mobile-only styled red text */}
-                <span className="ml-6 font-serif text-lg font-extrabold tracking-wide text-red-600 drop-shadow-sm sm:hidden">
-                  GPRS Studios
+                <span className="ml-6 font-serif text-lg font-extrabold tracking-wide text-yellow-600 drop-shadow-sm sm:hidden">
+                  GPRS Photography
                 </span>
               </a>
             </div>
@@ -421,14 +421,7 @@ export function EditorialHero() {
               <p className="mt-1 text-white">Creative direction</p>
             </div>
             <div className="flex gap-5 text-[10px] font-semibold uppercase tracking-[0.12em] text-white sm:gap-6 sm:text-[11px] sm:tracking-[0.15em]">
-              <a
-                href="https://www.facebook.com/share/1BFHcGftHD/"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:opacity-60"
-              >
-                Facebook
-              </a>
+
               <a
                 href="https://www.instagram.com/gprsphotos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 target="_blank"

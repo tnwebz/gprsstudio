@@ -245,32 +245,34 @@ const CircularTestimonials = ({
               </motion.p>
             </motion.div>
           </AnimatePresence>
-          <div className="arrow-buttons">
-            <button
-              className="arrow-button prev-button"
-              onClick={handlePrev}
-              style={{
-                backgroundColor: hoverPrev ? colorArrowHoverBg : colorArrowBg,
-              }}
-              onMouseEnter={() => setHoverPrev(true)}
-              onMouseLeave={() => setHoverPrev(false)}
-              aria-label="Previous testimonial"
-            >
-              <ArrowLeft size={18} color={colorArrowFg} />
-            </button>
-            <button
-              className="arrow-button next-button"
-              onClick={handleNext}
-              style={{
-                backgroundColor: hoverNext ? colorArrowHoverBg : colorArrowBg,
-              }}
-              onMouseEnter={() => setHoverNext(true)}
-              onMouseLeave={() => setHoverNext(false)}
-              aria-label="Next testimonial"
-            >
-              <ArrowRight size={18} color={colorArrowFg} />
-            </button>
-          </div>
+          {testimonialsLength > 1 && (
+            <div className="arrow-buttons">
+              <button
+                className="arrow-button prev-button"
+                onClick={handlePrev}
+                style={{
+                  backgroundColor: hoverPrev ? colorArrowHoverBg : colorArrowBg,
+                }}
+                onMouseEnter={() => setHoverPrev(true)}
+                onMouseLeave={() => setHoverPrev(false)}
+                aria-label="Previous testimonial"
+              >
+                <ArrowLeft size={18} color={colorArrowFg} />
+              </button>
+              <button
+                className="arrow-button next-button"
+                onClick={handleNext}
+                style={{
+                  backgroundColor: hoverNext ? colorArrowHoverBg : colorArrowBg,
+                }}
+                onMouseEnter={() => setHoverNext(true)}
+                onMouseLeave={() => setHoverNext(false)}
+                aria-label="Next testimonial"
+              >
+                <ArrowRight size={18} color={colorArrowFg} />
+              </button>
+            </div>
+          )}
         </div>
       </div>
       <style>{`
@@ -350,23 +352,10 @@ const CircularTestimonials = ({
 
 const STORY_MEMBERS = [
   {
-    name: "Mr. Senthil Kumar",
-    designation: "Proprietor",
-    src: "/p2.png",
-    quote: "With an eye for emotion and a heart for storytelling, I believe every frame holds a memory waiting to be timeless. My vision is to capture your legacy in its purest, most beautiful form.",
-  },
-  {
-    name: "Mr. Kumar",
-    designation: "Videographer",
-    src: "/p3.jpeg",
-    quote: "I don't just record events; I craft cinematic experiences that let you relive your best moments. Through motion and light, I turn your special day into an unforgettable film.",
-    objectPosition: "center 10%",
-  },
-  {
-    name: "Mr. Gobi",
+    name: "Mr prabaharan",
     designation: "Photographer",
     src: "/p1.jpeg",
-    quote: "Finding the perfect angle and the honest laugh is my passion. I freeze fleeting instances, transforming quiet in-betweens into art that speaks forever.",
+    quote: "With an eye for emotion and a passion for storytelling, I capture authentic moments and transform them into timeless cinematic memories. Every frame is crafted with care, preserving genuine emotions, beautiful details, and fleeting moments so you can relive your most cherished memories for years to come.",
   },
 ];
 

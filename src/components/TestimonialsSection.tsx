@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
 
-// 21 real review screenshots – served from /public
-const REVIEWS = Array.from({ length: 21 }, (_, i) => ({
+// 9 real review screenshots – served from /public
+const REVIEWS = Array.from({ length: 9 }, (_, i) => ({
   id: i + 1,
   src: `/t (${i + 1}).png`,
   alt: `Customer review ${i + 1}`,
 }));
 
 // Split reviews into 3 balanced columns
-const col1 = REVIEWS.filter((_, i) => i % 3 === 0); // 1,4,7,10,13,16,19
-const col2 = REVIEWS.filter((_, i) => i % 3 === 1); // 2,5,8,11,14,17,20
-const col3 = REVIEWS.filter((_, i) => i % 3 === 2); // 3,6,9,12,15,18,21
+const col1 = REVIEWS.filter((_, i) => i % 3 === 0);
+const col2 = REVIEWS.filter((_, i) => i % 3 === 1);
+const col3 = REVIEWS.filter((_, i) => i % 3 === 2);
 
 type ReviewColumnProps = {
   className?: string;

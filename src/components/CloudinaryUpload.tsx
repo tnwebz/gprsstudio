@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 
+
 type CloudinaryUploadProps = {
   onUploadSuccess: (urls: string[]) => void;
 };
@@ -34,7 +35,7 @@ export function CloudinaryUpload({ onUploadSuccess }: CloudinaryUploadProps) {
         formData.append('file', file);
         formData.append('upload_preset', 'ml_default');
 
-        const response = await fetch('https://api.cloudinary.com/v1_1/dtsh613l2/image/upload', {
+        const response = await fetch('https://api.cloudinary.com/v1_1/jxs2c00u/image/upload', {
           method: 'POST',
           body: formData,
         });
@@ -50,6 +51,8 @@ export function CloudinaryUpload({ onUploadSuccess }: CloudinaryUploadProps) {
       const urls = await Promise.all(uploadPromises);
       setPreviews(urls);
       onUploadSuccess(urls);
+
+
       alert('Upload successful!');
       if (fileInputRef.current) {
         fileInputRef.current.value = '';
