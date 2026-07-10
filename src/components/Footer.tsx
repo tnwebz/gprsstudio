@@ -1,4 +1,4 @@
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 export function Footer() {
   return (
@@ -25,13 +25,26 @@ export function Footer() {
             </a>
           </div>
 
+          {/* Phone */}
+          <div className="flex items-center gap-2 text-zinc-300">
+            <Phone className="h-4 w-4 text-orange-500" />
+            <a
+              href="tel:+917708575051"
+              className="hover:text-white transition-colors"
+            >
+              +91 7708 575 051
+              <br />
+              (Mr.prabaharan)
+            </a>
+          </div>
+
           {/* Address */}
           <div className="flex items-center gap-2 text-zinc-300 max-w-xs text-center md:text-left">
             <MapPin className="h-5 w-5 shrink-0 text-orange-500" />
             <span>
-              GPRS Photography, 17, Main Road,{" "}
+              A4, Annamalai Complex, Indhira Gandhi salai,{" "}
               <br className="hidden md:block" />
-              Kumbakonam, TN
+              Kumbakonam 612 001
             </span>
           </div>
 
@@ -63,7 +76,6 @@ export function Footer() {
             </a>
           </div>
 
-
           {/* Google Rating */}
           <div className="flex items-center gap-2 text-zinc-300">
             <svg
@@ -94,7 +106,8 @@ export function Footer() {
 
       <div className="mt-8 border-t border-white/10 pt-6 flex flex-col items-center gap-2">
         <div className="text-xs text-zinc-500">
-          &copy; {new Date().getFullYear()} GPRS Photography. All rights reserved.
+          &copy; {new Date().getFullYear()} GPRS Photography. All rights
+          reserved.
         </div>
         <a
           href="https://tnwebz.com"

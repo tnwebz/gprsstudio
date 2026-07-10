@@ -417,19 +417,21 @@ export function EditorialHero() {
           </div>
 
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
-            <div className="text-[10px] leading-relaxed text-zinc-400 sm:text-[11px]">
-              <p>{today}</p>
-              <p className="mt-1 text-white">Creative direction</p>
-            </div>
+            <div className="text-[10px] leading-relaxed text-zinc-400 sm:text-[11px]"></div>
             <div className="flex gap-5 text-[10px] font-semibold uppercase tracking-[0.12em] text-white sm:gap-6 sm:text-[11px] sm:tracking-[0.15em]">
-
               <a
                 href="https://www.instagram.com/gprsphotos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 rel="noreferrer"
-                className="hover:opacity-60"
+                className="hover:opacity-60 order-1 sm:order-2"
               >
                 Instagram
+              </a>
+              <a
+                href="tel:+917708575051"
+                className="hover:opacity-60 order-2 sm:order-1"
+              >
+                +91 7708 575 051
               </a>
             </div>
           </div>

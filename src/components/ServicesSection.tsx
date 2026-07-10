@@ -10,6 +10,7 @@ const SERVICES: Array<{
 }> = [
   { slug: 'maternity', icon: Baby },
   { slug: 'birthday', icon: Gift },
+  { slug: 'birthday_party', icon: Gift },
   { slug: 'hindu_wedding', icon: Camera },
   { slug: 'christian_wedding', icon: Heart },
   { slug: 'bhramin_wedding', icon: Camera },

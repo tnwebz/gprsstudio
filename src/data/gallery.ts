@@ -8,7 +8,8 @@ export type ServiceSlug =
   | "puberty"
   | "sastiyathapoorthi"
   | "upanayanam"
-  | "maternity";
+  | "maternity"
+  | "birthday_party";
 
 export type GalleryCategory = "outdoor" | "candid" | "events" | "others";
 
@@ -102,5 +103,11 @@ export const SERVICE_META: Record<
     description:
       "Celebrate the beauty of motherhood with elegant, heartfelt portraits in a relaxed and comfortable session.",
     image: "/m1.jpg",
+  },
+  birthday_party: {
+    title: "Birthday Party",
+    description:
+      "Capturing all the fun, joy, and unforgettable moments of your special day.",
+    image: "/birth.png",
   },
 };
