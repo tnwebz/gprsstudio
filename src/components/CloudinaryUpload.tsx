@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-
+import { toast } from 'sonner';
 
 type CloudinaryUploadProps = {
   onUploadSuccess: (urls: string[]) => void;
@@ -15,14 +15,14 @@ export function CloudinaryUpload({ onUploadSuccess }: CloudinaryUploadProps) {
     if (files.length === 0) return;
 
     if (files.length > 5) {
-      alert('You can only upload a maximum of 5 images at a time!');
+      toast.error('You can only upload a maximum of 5 images at a time!');
       if (fileInputRef.current) fileInputRef.current.value = '';
       return;
     }
 
     const hasLargeFile = files.some((file) => file.size > 4 * 1024 * 1024);
     if (hasLargeFile) {
-      alert('One or more files exceed the 4MB limit!');
+      toast.error('One or more files exceed the 4MB limit!');
       if (fileInputRef.current) fileInputRef.current.value = '';
       return;
     }
@@ -53,13 +53,13 @@ export function CloudinaryUpload({ onUploadSuccess }: CloudinaryUploadProps) {
       onUploadSuccess(urls);
 
 
-      alert('Upload successful!');
+      toast.success('Upload successful!');
       if (fileInputRef.current) {
         fileInputRef.current.value = '';
       }
     } catch (error: any) {
       console.error('Upload error:', error);
-      alert('Upload failed: ' + error.message);
+      toast.error('Upload failed: ' + error.message);
     } finally {
       setUploading(false);
     }

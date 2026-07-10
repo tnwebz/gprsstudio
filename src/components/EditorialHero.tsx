@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState, useRef, useCallback } from "react";
 import { Shield, Menu, X } from "lucide-react";
 import { useAdmin } from "@/hooks/useAdmin";
+import { toast } from "sonner";
 
 const desktopImages = [1, 2, 7, 10];
 const mobileImages = [1, 2, 7, 8];
@@ -152,7 +153,7 @@ function ShieldAdminButton({ className }: { className?: string }) {
       setShowPasswordInput(false);
       setPassword("");
     } else {
-      alert("Wrong password!");
+      toast.error("Wrong password!");
       setPassword("");
     }
   };
