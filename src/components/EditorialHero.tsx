@@ -249,11 +249,6 @@ export function EditorialHero() {
     return () => window.clearInterval(timer);
   }, []);
 
-  const today = new Date().toLocaleDateString("en-GB", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric",
-  });
 
   return (
     <section className="relative min-h-[100dvh] overflow-hidden">
