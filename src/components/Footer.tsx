@@ -34,7 +34,7 @@ export function Footer() {
             >
               +91 7708 575 051
               <br />
-              (Mr.prabaharan)
+              (Mr.Prabhaharan)
             </a>
           </div>
 

@@ -24,13 +24,13 @@ export function StoryCTASection() {
           style={{ y: backgroundY }}
         >
           <img
-            src="/nn1.jpg"
+            src="/nn1.jpeg"
             alt=""
             className="h-full w-full object-cover object-[center_30%] sm:hidden"
             draggable={false}
           />
           <img
-            src="/n1.jpg"
+            src="/n1.jpeg"
             alt=""
             className="hidden h-full w-full object-cover sm:block sm:object-center"
             draggable={false}

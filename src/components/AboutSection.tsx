@@ -44,7 +44,9 @@ function calculateGap(width: number) {
   if (width <= minWidth) return minGap;
   if (width >= maxWidth)
     return Math.max(minGap, maxGap + 0.06018 * (width - maxWidth));
-  return minGap + (maxGap - minGap) * ((width - minWidth) / (maxWidth - minWidth));
+  return (
+    minGap + (maxGap - minGap) * ((width - minWidth) / (maxWidth - minWidth))
+  );
 }
 
 const CircularTestimonials = ({
@@ -71,12 +73,14 @@ const CircularTestimonials = ({
   const [containerWidth, setContainerWidth] = useState(1200);
 
   const imageContainerRef = useRef<HTMLDivElement>(null);
-  const autoplayIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const autoplayIntervalRef = useRef<ReturnType<typeof setInterval> | null>(
+    null,
+  );
 
   const testimonialsLength = useMemo(() => testimonials.length, [testimonials]);
   const activeTestimonial = useMemo(
     () => testimonials[activeIndex],
-    [activeIndex, testimonials]
+    [activeIndex, testimonials],
   );
 
   // Responsive gap calculation
@@ -99,7 +103,8 @@ const CircularTestimonials = ({
       }, 5000);
     }
     return () => {
-      if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
+      if (autoplayIntervalRef.current)
+        clearInterval(autoplayIntervalRef.current);
     };
   }, [autoplay, testimonialsLength]);
 
@@ -120,7 +125,9 @@ const CircularTestimonials = ({
     if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
   }, [testimonialsLength]);
   const handlePrev = useCallback(() => {
-    setActiveIndex((prev) => (prev - 1 + testimonialsLength) % testimonialsLength);
+    setActiveIndex(
+      (prev) => (prev - 1 + testimonialsLength) % testimonialsLength,
+    );
     if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
   }, [testimonialsLength]);
 
@@ -131,7 +138,8 @@ const CircularTestimonials = ({
     // const offset = (index - activeIndex + testimonialsLength) % testimonialsLength;
     // const zIndex = testimonialsLength - Math.abs(offset);
     const isActive = index === activeIndex;
-    const isLeft = (activeIndex - 1 + testimonialsLength) % testimonialsLength === index;
+    const isLeft =
+      (activeIndex - 1 + testimonialsLength) % testimonialsLength === index;
     const isRight = (activeIndex + 1) % testimonialsLength === index;
     if (isActive) {
       return {
@@ -188,7 +196,10 @@ const CircularTestimonials = ({
               alt={testimonial.name}
               className="testimonial-image"
               data-index={index}
-              style={{ ...getImageStyle(index), objectPosition: testimonial.objectPosition || "center" }}
+              style={{
+                ...getImageStyle(index),
+                objectPosition: testimonial.objectPosition || "center",
+              }}
             />
           ))}
         </div>
@@ -211,7 +222,10 @@ const CircularTestimonials = ({
               </h3>
               <p
                 className="designation uppercase tracking-widest text-sm font-semibold mb-6"
-                style={{ color: colorDesignation, fontSize: fontSizeDesignation }}
+                style={{
+                  color: colorDesignation,
+                  fontSize: fontSizeDesignation,
+                }}
               >
                 {activeTestimonial.designation}
               </p>
@@ -352,10 +366,11 @@ const CircularTestimonials = ({
 
 const STORY_MEMBERS = [
   {
-    name: "Mr prabaharan",
+    name: "Mr Prabhaharan",
     designation: "Photographer",
     src: "/p1.jpeg",
-    quote: "With an eye for emotion and a passion for storytelling, I capture authentic moments and transform them into timeless cinematic memories. Every frame is crafted with care, preserving genuine emotions, beautiful details, and fleeting moments so you can relive your most cherished memories for years to come.",
+    quote:
+      "With an eye for emotion and a passion for storytelling, I capture authentic moments and transform them into timeless cinematic memories. Every frame is crafted with care, preserving genuine emotions, beautiful details, and fleeting moments so you can relive your most cherished memories for years to come.",
   },
 ];
 
@@ -365,7 +380,13 @@ export function AboutSection() {
       id="about"
       className="bg-[#f8fafc] px-4 py-16 sm:px-8 sm:py-20 lg:px-14 lg:py-32 relative overflow-hidden"
     >
-      <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(circle at top right, rgba(5,150,105,0.03) 0%, transparent 70%)' }}></div>
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(circle at top right, rgba(5,150,105,0.03) 0%, transparent 70%)",
+        }}
+      ></div>
       <div className="mx-auto max-w-7xl relative z-10">
         <div className="mb-12 sm:mb-16 text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400">
@@ -375,9 +396,9 @@ export function AboutSection() {
             Our Story
           </h2>
         </div>
-        
-        <CircularTestimonials 
-          testimonials={STORY_MEMBERS} 
+
+        <CircularTestimonials
+          testimonials={STORY_MEMBERS}
           autoplay={true}
           colors={{
             name: "#09090b",
@@ -385,12 +406,12 @@ export function AboutSection() {
             testimony: "#3f3f46",
             arrowBackground: "#18181b",
             arrowHoverBackground: "#059669",
-            arrowForeground: "#ffffff"
+            arrowForeground: "#ffffff",
           }}
           fontSizes={{
             name: "2rem",
             designation: "0.85rem",
-            quote: "1.2rem"
+            quote: "1.2rem",
           }}
         />
       </div>
