@@ -328,6 +328,7 @@ const CircularTestimonials = ({
         }
         .quote {
           line-height: 1.8;
+          font-style: italic;
         }
         .arrow-buttons {
           display: flex;
